@@ -1,0 +1,24 @@
+<!-- ===== templates/index.html ===== -->
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+<title>File Organization Simulation</title>
+</head>
+<body>
+<h1>📂 File Organization Simulation</h1>
+<form method="post">
+    <label>Choose File Organization:</label>
+    <select name="org_type">
+        <option>Sequential</option>
+        <option>Indexed</option>
+        <option>Direct</option>
+        <option>B-Tree</option>
+    </select>
+    <label>Number of Records:</label>
+    <input type="number" name="num_records" min="5" max="100" value="20">
+    <button type="submit">Simulate</button>
+</form>
+<a href="/about">About / Authors</a>
+</body>
+</html>
