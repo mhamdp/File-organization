@@ -1,0 +1,44 @@
+<!-- ===== templates/result.html ===== -->
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+<title>Results</title>
+</head>
+<body>
+<h1>{{ org_type }} Simulation Results</h1>
+<h2>Stored Data</h2>
+<table>
+<tr>
+{% for key in data[0].keys() %}
+    <th>{{ key }}</th>
+{% endfor %}
+</tr>
+{% for row in data %}
+<tr>
+{% for value in row.values() %}
+    <td>{{ value }}</td>
+{% endfor %}
+</tr>
+{% endfor %}
+</table>
+
+<h2>Performance Metrics</h2>
+<table>
+<tr>
+{% for key in metrics[0].keys() %}
+    <th>{{ key }}</th>
+{% endfor %}
+</tr>
+{% for row in metrics %}
+<tr>
+{% for value in row.values() %}
+    <td>{{ value }}</td>
+{% endfor %}
+</tr>
+{% endfor %}
+</table>
+
+<a href="/">Back</a>
+</body>
+</html>
